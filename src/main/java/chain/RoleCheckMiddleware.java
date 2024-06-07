@@ -2,6 +2,7 @@ package chain;
 
 /**
  * Конкретный элемент цепи, который проверяет доступ по ролям
+ * @author alkl1m
  */
 public class RoleCheckMiddleware extends Middleware {
     @Override

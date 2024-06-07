@@ -2,6 +2,7 @@ package chain;
 
 /**
  * Базовый класс цепочки
+ * @author alkl1m
  */
 public abstract class Middleware {
     private Middleware next;

@@ -5,6 +5,7 @@ import java.util.Map;
 
 /**
  * Имитация сервера
+ * @author alkl1m
  */
 public class Server {
     private Map<String, String> users = new HashMap<>();
