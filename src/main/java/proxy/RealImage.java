@@ -3,6 +3,7 @@ package proxy;
 /**
  * Репрезентация реального объекта над которым
  * у прокси будет контроль
+ * @author alkl1m
  */
 public class RealImage implements Image {
     private String filename;

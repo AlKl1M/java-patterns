@@ -2,6 +2,7 @@ package proxy;
 
 /**
  * Прокси
+ * @author alkl1m
  */
 public class ProxyImage implements Image {
 
