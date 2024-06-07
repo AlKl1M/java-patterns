@@ -1,3 +1,5 @@
+package chain;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -6,12 +8,12 @@ class MiddlewareTest {
 
     @Test
     public void testMiddleware_withAdminCredentials_ReturnsValidResult() {
-        Server server = new Server();
+        chain.Server server = new chain.Server();
         server.register("admin@example.com", "admin_pass");
 
-        Middleware middleware = Middleware.link(
-                new UserExistsMiddleware(server),
-                new RoleCheckMiddleware()
+        chain.Middleware middleware = chain.Middleware.link(
+                new chain.UserExistsMiddleware(server),
+                new chain.RoleCheckMiddleware()
         );
 
         server.setMiddleware(middleware);
@@ -23,12 +25,12 @@ class MiddlewareTest {
 
     @Test
     public void testMiddleware_withUserCredentials_ReturnsValidResult() {
-        Server server = new Server();
+        chain.Server server = new chain.Server();
         server.register("user@example.com", "user_pass");
 
-        Middleware middleware = Middleware.link(
-                new UserExistsMiddleware(server),
-                new RoleCheckMiddleware()
+        chain.Middleware middleware = chain.Middleware.link(
+                new chain.UserExistsMiddleware(server),
+                new chain.RoleCheckMiddleware()
         );
 
         server.setMiddleware(middleware);
@@ -40,12 +42,12 @@ class MiddlewareTest {
 
     @Test
     public void testMiddleware_withInvalidCredentials_ReturnsValidResult() {
-        Server server = new Server();
+        chain.Server server = new chain.Server();
         server.register("user@example.com", "user_pass");
 
-        Middleware middleware = Middleware.link(
-                new UserExistsMiddleware(server),
-                new RoleCheckMiddleware()
+        chain.Middleware middleware = chain.Middleware.link(
+                new chain.UserExistsMiddleware(server),
+                new chain.RoleCheckMiddleware()
         );
 
         server.setMiddleware(middleware);
