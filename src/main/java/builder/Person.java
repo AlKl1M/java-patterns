@@ -6,6 +6,12 @@ public class Person {
     private final String lastName;
     private final int age;
 
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
     private Person(PersonBuilder personBuilder) {
         this.firstName = personBuilder.firstName;
         this.lastName = personBuilder.lastName;
@@ -68,6 +74,5 @@ public class Person {
         public Person build() {
             return new Person(this);
         }
-
     }
 }
