@@ -2,9 +2,11 @@ package adapter;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class RoundHoleTest {
+
     @Test
     void testRoundHole_WithValidRoundPeg_ReturnsValidData() {
         RoundHole hole = new RoundHole(5);
