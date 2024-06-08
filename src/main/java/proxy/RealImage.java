@@ -1,5 +1,8 @@
 package proxy;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * Репрезентация реального объекта над которым
  * у прокси будет контроль
@@ -7,18 +10,23 @@ package proxy;
  */
 public class RealImage implements Image {
     private String filename;
+    private final Logger logger = LogManager.getLogger(getClass());
 
     public RealImage(String filename) {
         this.filename = filename;
         loadImageFromDisk();
     }
 
-    private void loadImageFromDisk() {
-        System.out.println("Loading image: " + filename);
+    public String getFilename() {
+        return filename;
+    }
+
+    public void loadImageFromDisk() {
+        logger.info("Loading image: " + filename);
     }
 
     @Override
     public void display() {
-        System.out.println("Displaying image: " + filename);
+        logger.info("Displaying image: " + filename);
     }
 }

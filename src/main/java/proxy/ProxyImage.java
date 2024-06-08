@@ -1,7 +1,7 @@
 package proxy;
 
 /**
- * Прокси
+ * Прокси для объекта RealImage
  * @author alkl1m
  */
 public class ProxyImage implements Image {
@@ -23,5 +23,21 @@ public class ProxyImage implements Image {
             realImage = new RealImage(fileName);
         }
         realImage.display();
+    }
+
+    public RealImage getRealImage() {
+        return realImage;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setRealImage(RealImage realImage) {
+        this.realImage = realImage;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 }
