@@ -2,27 +2,24 @@ package facade;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 class WorkflowTest {
 
     @Test
-    void testWorkflow_withValidPayload_ReturnsValidData() {
-        Workflow workflow = new Workflow();
+    void testWorkflow_withValidPayload_RunsEveryInnerMethodOfFacade() {
+        Developer developer = mock(Developer.class);
+        Job job = mock(Job.class);
+        BugTracker bugTracker = mock(BugTracker.class);
 
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outputStream));
+        Workflow workflow = new Workflow(developer, job, bugTracker);
 
         workflow.solveProblems();
 
-        String consoleOutput = outputStream.toString();
-
-        assertTrue(consoleOutput.contains("Job in progress..."));
-        assertTrue(consoleOutput.contains("Sprint is active."));
-        assertTrue(consoleOutput.contains("Developer is working..."));
+        verify(job).doJob();
+        verify(bugTracker).startSprint();
+        verify(developer).doJobBeforeDeadline(bugTracker);
     }
 
 }
