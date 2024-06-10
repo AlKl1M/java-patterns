@@ -20,8 +20,6 @@ public class RoundHole {
      * @return проверка вместился ли колышек в отверстие или нет
      */
     public boolean fits(RoundPeg peg) {
-        boolean result;
-        result = (this.getRadius() >= peg.getRadius());
-        return result;
+        return (this.getRadius() >= peg.getRadius());
     }
 }
