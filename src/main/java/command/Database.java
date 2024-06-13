@@ -22,4 +22,5 @@ public class Database {
     public void delete() {
         logger.info("Deleting record...");
     }
+
 }

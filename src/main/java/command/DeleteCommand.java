@@ -16,4 +16,5 @@ public class DeleteCommand implements Command {
     public void execute() {
         database.delete();
     }
+
 }

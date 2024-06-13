@@ -16,4 +16,5 @@ class UpdateCommandTest {
 
         verify(database, times(1)).update();
     }
+
 }

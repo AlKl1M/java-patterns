@@ -17,4 +17,5 @@ class InsertCommandTest {
 
         verify(database, times(1)).insert();
     }
+
 }

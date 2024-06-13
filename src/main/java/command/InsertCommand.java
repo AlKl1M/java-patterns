@@ -16,4 +16,5 @@ public class InsertCommand implements Command {
     public void execute() {
         database.insert();
     }
+
 }

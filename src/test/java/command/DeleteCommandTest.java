@@ -17,4 +17,5 @@ class DeleteCommandTest {
 
         verify(database, times(1)).delete();
     }
+
 }

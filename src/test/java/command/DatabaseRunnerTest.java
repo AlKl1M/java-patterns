@@ -28,4 +28,5 @@ class DatabaseRunnerTest {
         verify(database, times(1)).select();
         verify(database, times(1)).delete();
     }
+
 }

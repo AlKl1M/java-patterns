@@ -16,4 +16,5 @@ public class SelectCommand implements Command {
     public void execute() {
         database.select();
     }
+
 }
