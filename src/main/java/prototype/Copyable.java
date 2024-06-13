@@ -1,8 +1,8 @@
 package prototype;
 
 /**
- * Аналог Copyable из стандартной библиотеки
- * для наглядности
+ * Предоставляет стандартные средства копирования
+ * объектов данных
  * @author alkl1m
  */
 public interface Copyable {
