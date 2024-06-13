@@ -15,4 +15,5 @@ public class VersionControlRunner {
         Project masterClone = factory.cloneProject();
         System.out.println(masterClone);
     }
+
 }

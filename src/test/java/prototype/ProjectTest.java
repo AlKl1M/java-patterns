@@ -41,4 +41,5 @@ class ProjectTest {
         assertNotEquals(master.getProjectName(), masterClone.getProjectName());
         assertNotEquals(master.getSourceCode(), masterClone.getSourceCode());
     }
+
 }
