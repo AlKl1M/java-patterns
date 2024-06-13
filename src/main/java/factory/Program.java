@@ -21,4 +21,5 @@ public final class Program {
             throw new RuntimeException(speciality + " is unknown speciality");
         }
     }
+
 }

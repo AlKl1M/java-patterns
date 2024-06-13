@@ -15,4 +15,5 @@ public class JavaDeveloper implements Developer {
     public void writeCode() {
         logger.info("Java dev writes Java code...");
     }
+
 }

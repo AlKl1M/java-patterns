@@ -15,4 +15,5 @@ public class CppDeveloper implements Developer {
     public void writeCode() {
         logger.info("C++ developer writes C++ code...");
     }
+
 }

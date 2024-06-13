@@ -10,4 +10,5 @@ public interface Developer {
      * Обязательный для всех разработчиков метод
      */
     void writeCode();
+
 }
